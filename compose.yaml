@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    tty: true
+    volumes:
+      - ./project:/project
+    environment:
+      - WATCHPACK_POLLING=true
+    ports:
+      - "8000:8000"
+
